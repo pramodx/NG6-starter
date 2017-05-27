@@ -1,7 +1,7 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import agentsComponent from './agents.component';
-import agentsService from './../../core/agents/agents';
+import agentsService from '../../services/agents/agents';
 
 let agentsModule = angular.module('agents', [
     uiRouter
@@ -19,7 +19,7 @@ let agentsModule = angular.module('agents', [
             });
     })
 
-    .component('agents', agentsComponent.name)
+    .component('agents', agentsComponent)
     .service('agentsService', agentsService)
 
     .name;

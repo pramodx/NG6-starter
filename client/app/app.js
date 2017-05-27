@@ -1,6 +1,7 @@
 import angular from 'angular';
+import ngResource from 'angular-resource';
 import uiRouter from 'angular-ui-router';
-import Core from './core/core';
+import Services from './services/services';
 import Common from './common/common';
 import Components from './components/components';
 import AppComponent from './app.component';
@@ -8,7 +9,8 @@ import 'normalize.css';
 
 angular.module('app', [
     uiRouter,
-    Core,
+    ngResource,
+    Services,
     Common,
     Components
   ])

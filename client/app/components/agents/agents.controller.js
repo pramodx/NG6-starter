@@ -1,12 +1,11 @@
 
 class AgentsController {
     constructor(agentsService) {
-        console.log(agentsService)
+        "ngInject"
         this.fetchAgentService = agentsService
         this.name = 'agents';
         this.searchTerm = '';
         this.fetchAgents = () => {
-            debugger
             console.log(this.searchTerm);
             this.fetchAgentService.getAgents(this.searchTerm)
         }
@@ -14,8 +13,6 @@ class AgentsController {
     }
 }
 
-AgentsController.$inject = ['agentsService'];
+// AgentsController.$inject = ['agentsService'];
 
-export default {
-    controller: AgentsController
-} ;
+export default AgentsController;
