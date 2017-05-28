@@ -5,16 +5,17 @@ class AgentsController {
         this.fetchAgentService = agentsService;
         this.name = 'agents';
         this.searchTerm = '';
-        this.agents = [];
+        this.agents;
         this.limit = 0;
+        this.loading = false;
         this.fetchAgents = () => {
-            //console.log(this.searchTerm);
+            this.loading = true;
            this.fetchAgentService.getAgents(this.searchTerm)
                .then(response => {
                    this.limit = 10;
                    this.agents = response.Results;
+                   this.loading = false;
                });
-            console.log('agents', this.agents)
         }
 
     }

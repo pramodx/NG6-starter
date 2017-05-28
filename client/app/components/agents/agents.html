@@ -7,10 +7,15 @@
         </div>
 
     </section>
-    <section class="list">
-        <div class="wrapper">
+    <section class="list" ng-class="{'loading' : $ctrl.loading === true}">
+        <div class="wrapper" >
+            <div ng-if="$ctrl.agents.length === 0">
+                <p class="warning">No agents found</p>
+            </div>
             <div ng-repeat="agent in $ctrl.agents | limitTo: $ctrl.limit" class="item media rounded-img">
-                <img class="media-img" src="{{ agent.ImageUrl }}" alt="">
+                <div class="media-img">
+                    <img src="{{ agent.ImageUrl }}" alt="">
+                </div>
                 <div class="media-body">
                     <h3 class="gamma">{{ agent.Name }}</h3>
                     <p class="default-text">{{ agent.SecondaryName }}</p>

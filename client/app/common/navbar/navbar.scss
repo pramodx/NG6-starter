@@ -5,7 +5,7 @@
   height: $nav-height;
   border-bottom: 1px solid #ccc;
   @include breakpoint(sm) {
-	height: auto;
+	height: 45px;
   }
 
   nav {

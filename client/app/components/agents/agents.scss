@@ -20,13 +20,28 @@
   padding: 10px;
   height: calc(50vh);
   background-color: $white;
+  @include breakpoint(sm){
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	max-width: 90%;
+	margin: auto;
+  }
   .item {
 	border-bottom: 1px solid $borderLight;
+	@include breakpoint(sm) {
+	  display: inline-flex;
+	  flex-grow: 1;
+	  margin-bottom: 10px;
+	  width: 33%;
+	  border: 0;
+	}
   }
 }
 .media {
   padding: 10px 0;
-  img {
+  .media-img {
 	width: 50px;
 	height: 50px;
   }
