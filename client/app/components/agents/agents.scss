@@ -2,17 +2,23 @@
 .form {
   display: flex;
   align-items: center;
-  height: 30vh;
-  .wrapper {
-	margin: auto;
+  max-width: 90%;
+  height: 50vh;
+  margin: auto;
+  input[type=text] {
+	flex-grow: 2;
   }
   button {
-	float: right;
+	flex-grow: 1;
+  }
+  @include breakpoint(sm) {
+	max-width: 60%;
+
   }
 }
 .list {
   padding: 10px;
-  height: calc(75vh);
+  height: calc(50vh);
   background-color: $white;
   .item {
 	border-bottom: 1px solid $borderLight;

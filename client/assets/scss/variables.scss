@@ -5,5 +5,12 @@ $textColorSecondary:  #616f82;
 $borderDark: #9b9b9b;
 $borderLight: #ccc;
 
+.simple-gradient {
+  background: -webkit-linear-gradient(top, $white, $white, #f6f6f6);
+  background: -moz-linear-gradient(top, $white, $white, #f6f6f6);
+  background: linear-gradient(top, $white, $white, #f6f6f6);
+}
+
 //dimensions
 $nav-height: 3.5rem;
+
