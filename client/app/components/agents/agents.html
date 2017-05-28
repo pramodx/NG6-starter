@@ -1,7 +1,9 @@
 <navbar></navbar>
-<h1>{{ $ctrl.name }}</h1>
-<section>
-    This is the agents page
-</section>
-<input type="text" ng-model="$ctrl.searchTerm"/>
-<button ng-click="$ctrl.fetchAgents()">Search</button>
+<div class="main site-wrap">
+    <h1>{{ $ctrl.name }}</h1>
+    <section>
+        This is the agents page
+    </section>
+    <input type="text" ng-model="$ctrl.searchTerm"/>
+    <button ng-click="$ctrl.fetchAgents()">Search</button>
+</div>
