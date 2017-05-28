@@ -1,9 +1,21 @@
 <navbar></navbar>
 <div class="main site-wrap">
-    <h1>{{ $ctrl.name }}</h1>
-    <section>
-        This is the agents page
+    <section class="form">
+        <div class="wrapper">
+            <input type="text" ng-model="$ctrl.searchTerm"/>
+            <button class="clickable" ng-click="$ctrl.fetchAgents()">Search</button>
+        </div>
+
     </section>
-    <input type="text" ng-model="$ctrl.searchTerm"/>
-    <button ng-click="$ctrl.fetchAgents()">Search</button>
+    <section class="list">
+        <div class="wrapper">
+            <div ng-repeat="agent in $ctrl.agents | limitTo: $ctrl.limit" class="item media rounded-img">
+                <img class="media-img" src="{{ agent.ImageUrl }}" alt="">
+                <div class="media-body">
+                    <h3 class="gamma">{{ agent.Name }}</h3>
+                    <p class="default-text">{{ agent.SecondaryName }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>

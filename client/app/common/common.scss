@@ -12,9 +12,14 @@ body {
    }
 }
 
+
+input[type=text] {
+   padding: 5px;
+}
+
 .site-wrap {
    position: relative;
-   padding: 20px;
+   padding: 0;
    min-width: 100%;
    min-height: 100vh;
    background-color: #fff;
@@ -22,7 +27,6 @@ body {
 }
 
 .main {
-   height: 40%;
    text-align: center;
    background: transparent url('/assets/img/house-svp.jpg') no-repeat 0 0/cover;
 }
@@ -34,3 +38,46 @@ body {
    text-shadow: 2px 5px 8px #888;
    text-transform: capitalize;
 }
+.gamma {
+   margin: 0;
+   color: $textColorSecondary;
+   font-size: .85rem;
+}
+.default-text {
+   margin: 0;
+   color: $textColourPrimary;
+   font-size: .75rem;
+}
+
+.clickable {
+   padding: 10px 15px;
+   color: $textColorSecondary;
+   font-size: .7rem;
+   text-transform: uppercase;
+   border: 0;
+   border-left: 1px solid $borderDark;
+   background: -webkit-linear-gradient(top, $white, $white, #f6f6f6);
+   background: -moz-linear-gradient(top, $white, $white, #f6f6f6);
+   background: linear-gradient(top, $white, $white, #f6f6f6);
+}
+
+.media {
+   display: flex;
+   align-items: flex-start;
+}
+
+.media-img {
+   margin-right: 20px;
+}
+
+.media-body {
+   flex: 1;
+   text-align: left;
+}
+
+.rounded-img {
+   img {
+      border-radius: 50%;
+   }
+}
+

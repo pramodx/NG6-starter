@@ -1,0 +1,27 @@
+@import './../../common/common';
+.form {
+  display: flex;
+  align-items: center;
+  height: 30vh;
+  .wrapper {
+	margin: auto;
+  }
+  button {
+	float: right;
+  }
+}
+.list {
+  padding: 10px;
+  height: calc(75vh);
+  background-color: $white;
+  .item {
+	border-bottom: 1px solid $borderLight;
+  }
+}
+.media {
+  padding: 10px 0;
+  img {
+	width: 50px;
+	height: 50px;
+  }
+}

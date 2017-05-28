@@ -2,7 +2,7 @@
 
 .navigation {
   position: relative;
-  height: 3.5rem;
+  height: $nav-height;
   border-bottom: 1px solid #ccc;
 
   nav {
@@ -25,8 +25,8 @@
 	width: 100%;
 	color: #fff;
 	text-transform: capitalize;
-	background-color: #a1a1a1;
-	border-bottom: 1px solid #fff;
+	background-color: #1a1a1a;
+	& + .nav-item { border-top: 1px solid #fff; }
 	a {
 	  display: block;
 	  color: inherit;
